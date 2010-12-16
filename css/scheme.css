@@ -111,3 +111,35 @@ footer p {
 		code .c1 { /* comment */
 			color: #666;
 		}
+ul.posts {
+	list-style: none;
+}
+	.post {
+		position: relative;
+		padding-left: 40px;
+		min-height: 100px;
+	}
+	.post .date {
+		display: block;
+		position: absolute;
+		left: -7px;
+		width: 40px;
+		border: 1px solid #607890;
+		text-align: center;
+		font-family: 'Arial Narrow', sans-serif;
+	}
+		.post .date .day {
+			font-size: 2.2em;
+			line-height: 1em;
+			font-weight: bold;
+			display: block;
+		}
+		.post .date .month, .post .date .year {
+			display: block;
+			font-weight: bold;
+			background-color: #607890;
+			color: #222;
+		}
+		.post .date .year {
+			display: none;
+		}

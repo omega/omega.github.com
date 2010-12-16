@@ -2,5 +2,4 @@
 layout: default
 title: A New beginning!
 ---
-I wonder what happens now! How do I create the index?
-
+So, I have decided to attempt one more time to "rebirth" my site.
