@@ -1,145 +1,161 @@
 body {
-	background: #222;
+    background: #002b36;
 }
 #container {
-	margin-top: 30px;
+    margin-top: 30px;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Arial Narrow', sans-serif;
+    font-family: 'Arial Narrow', sans-serif;
 }
 
 header {
-	-webkit-box-shadow: 0px 0px 50px #fff;
-	-moz-box-shadow: 0px 0px 50px #fff;
-	box-shadow: 0px 0px 50px #fff;
+    -webkit-box-shadow: 0px 0px 50px #586e75;
+    -moz-box-shadow: 0px 0px 50px #586e75;
+    box-shadow: 0px 0px 50px #586e75;
 }
-	header h1 {
-		font-size: 6em;
-		text-align: right;
-		text-shadow: 0px 0px 2px #000;
-		filter: dropshadow(color=#000, offx=0, offy=0);
-	}
-	header > div {
-		position: relative;
-	}
-	header h2 {
-		position: absolute;
-		font-size: 3em;
-		bottom: 0.2em;
-		color: #888;
-		text-shadow: 0px 0px 2px #000;
-		filter: dropshadow(color=#000, offx=0, offy=0);
-	}
+header h1 {
+    color: #586e75;
+    font-size: 6em;
+    text-align: right;
+    text-shadow: 0px 0px 2px #073642;
+    filter: dropshadow(color=#073642, offx=0, offy=0);
+}
+header > div {
+    position: relative;
+}
+header h2 {
+    position: absolute;
+    font-size: 3em;
+    bottom: 0.2em;
+    color: #839496;
+    text-shadow: 0px 0px 2px #073642;
+    filter: dropshadow(color=#073642, offx=0, offy=0);
+}
+
+#main .navigation {
+    font-family: 'Arial Narrow', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    background: #002b36;
+    padding: 0.3em 0;
+    padding-bottom: 0.7em;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #839496 !important;
+}
+#main .navigation a {
+    color: #839496;
+}
+#main .navigation a:visited {
+    color: #586e75;
+}
 footer p {
-	font-size: 1.1em;
-	margin: 1em 0;
-	text-align: center;
+    font-size: 1.1em;
+    margin: 1em 0;
+    text-align: center;
+    color: #859900;
 }
 
 #main {
-	background: #aaa;
-	-moz-border-radius-bottomright: 10px;
-	-moz-border-radius-bottomleft: 10px;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
-	min-height: 5em;
+    background: #fdf6e3;
+    -moz-border-radius-bottomright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    min-height: 5em;
 }
-	#main .content {
-		padding: 1em 0;
-		border-radius:
-	}
-	#main h1 {
-		font-size: 2em;
-	}
-	#main h2 {
-		font-size: 1.4em;
-		margin-top: 0.8em;
-	}
-
-	#main .navigation {
-		font-family: 'Arial Narrow', sans-serif;
-		font-weight: bold;
-		font-size: 1.2em;
-		background: #222;
-		padding: 0.3em 0;
-		padding-bottom: 0.7em;
-		-moz-border-radius-bottomright: 10px;
-		-moz-border-radius-bottomleft: 10px;
-		border-bottom-right-radius: 10px;
-		border-bottom-left-radius: 10px;
-	}
-
-	#main blockquote {
-		border-left: 1px solid #222;
-		margin: 0.3em 2.5em;
-		padding-left: 0.5em;
-	}
-	#main ul, #main ol {
-		margin: 0.5em 3em;
-	}
-
-	div.highlight {
-		margin: 0.3em 0;
-		border: 1px solid #222;
-		background: #222;
-		-moz-border-radius-topright: 10px;
-		-moz-border-radius-bottomleft: 10px;
-		border-top-right-radius: 10px;
-		border-bottom-left-radius: 10px;
-	}
-		code .k, code .nb { /* keyword */
-			color: #999922;
-		}
-		code .n { /* names */
-			color: #992299;
-		}
-		code .p { /* stuff like ; { () } */
-			color: #999;
-		}
-		code .nv { /* variables? */
-			color: #229999;
-		}
-		code .o { /* operators */
-			color: #229922;
-		}
-		code .mi { /* numbers? */
-			color: #607890;
-		}
-		code .s { /* string */
-			color: #607890;
-		}
-		code .c1 { /* comment */
-			color: #666;
-		}
-ul.posts {
-	list-style: none;
+#main .content {
+    padding: 1em 0;
+    color: #657b83;
 }
-	.post {
-		position: relative;
-		padding-left: 40px;
-		min-height: 100px;
-	}
-	.post .date {
-		display: block;
-		position: absolute;
-		left: -7px;
-		width: 40px;
-		border: 1px solid #607890;
-		text-align: center;
-		font-family: 'Arial Narrow', sans-serif;
-	}
-		.post .date .day {
-			font-size: 2.2em;
-			line-height: 1em;
-			font-weight: bold;
-			display: block;
-		}
-		.post .date .month, .post .date .year {
-			display: block;
-			font-weight: bold;
-			background-color: #607890;
-			color: #222;
-		}
-		.post .date .year {
-			display: none;
-		}
+#main h1 {
+    font-size: 2em;
+}
+#main h2 {
+    font-size: 1.4em;
+    margin-top: 0.8em;
+}
+
+
+#main blockquote {
+    border-left: 1px solid #222;
+    margin: 0.3em 2.5em;
+    padding-left: 0.5em;
+}
+#main ul, #main ol {
+    margin: 0.5em 3em;
+}
+
+div.highlight {
+    margin: 0.3em 0;
+    border: 1px solid #073642;
+    background: #002b36;
+    -moz-border-radius-topright: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+div.highlight pre {
+    white-space: pre-wrap;
+}
+code .k, code .nb { /* keyword */
+    color: #859900;
+    }
+    code .n { /* names */
+        color: #b58900;
+    }
+    code .p { /* stuff like ; { () } */
+        // color: #999;
+    }
+    code .nv { /* variables? */
+        color: #2aa198;
+    }
+    code .o { /* operators */
+        // color: #229922;
+    }
+    code .mi { /* numbers? */
+        // color: #607890;
+    }
+    code .s { /* string */
+        // color: #607890;
+    }
+    code .c1 { /* comment */
+        color: #586e75;
+    }
+    #main ul.posts {
+        list-style: none;
+        margin: 0 !important;
+        padding:0;
+}
+.post {
+    position: relative;
+    padding-left: 47px;
+    min-height: 100px;
+}
+.post .date {
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 40px;
+    border: 1px solid #cb4b16;
+    text-align: center;
+    font-family: 'Arial Narrow', sans-serif;
+}
+.post .date .day {
+    font-size: 2.2em;
+    line-height: 1em;
+    font-weight: bold;
+    display: block;
+    color: #586e75;
+    }
+    .post .date .month, .post .date .year {
+        display: block;
+        font-weight: bold;
+        background-color: #cb4b16;
+        color: #eee8d5;
+    }
+    .post .date .year {
+        display: none;
+    }

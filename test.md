@@ -6,15 +6,15 @@ So this should stretch our css a lot
 
 ## Some code
 {% highlight perl %}
-    use Moose;
-    print "Blahblah\n";
-    if ($a == 1) {
-        die "OmG";
-    }
-    # I also wonder how a really long code line will look on this web page.
-    sub myFunc {
-        my ($self, $arg) = @_;
-    }
+use Moose;
+print "Blahblah\n";
+if ($a == 1) {
+    die "OmG";
+}
+# I also wonder how a really long code line will look on this web page.
+sub myFunc {
+    my ($self, $arg) = @_;
+}
 {% endhighlight %}
 
 ## Some lists
