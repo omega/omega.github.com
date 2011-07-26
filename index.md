@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Welcome
 ---
 <ul class="posts">
 {% for post in site.posts limit:5 %}
