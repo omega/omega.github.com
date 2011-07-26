@@ -44,6 +44,7 @@
   <!-- CSS : implied media="all" -->
   <link rel="stylesheet" href="/css/style.css?v=2">
   <link rel="stylesheet" href="/css/grid.css?v=1">
+  <link rel="stylesheet" href="/css/highlight.css?v=1">
   <link rel="alternate" href="/atom.xml" type="application/atom+xml">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
@@ -58,33 +59,37 @@
 
 <body>
 
-  <div id="container">
-    <header>
-      <div class="row">
-        <div class="column grid_9">
-          <h1>omega.palle.net</h1>
-          <h2>{{ page.title }}</h2>
+    <div id="container">
+        <header>
+        <div class="row">
+            <div class="column grid_9">
+                <ul class="navigation">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/test.html">Test</a></li>
+                </ul>
+                <h1>omega.palle.net</h1>
+            </div>
         </div>
-      </div>
-    </header>
+        </header>
 
-    <div id="main" role="main" class="row">
-      <div class="column grid_6 content">
-        {{ content }}
-      </div>
-      <div class="column grid_3 navigation">
-        <ul class="">
-          <li><a href="/">Home</a></li>
-        </ul>
-      </div>
-    </div>
+        <div id="main" role="main" class="row">
+            <div class="column grid_9">
+                <h1>{{ page.title }}</h1>
+            </div>
 
-    <footer class="row">
-      <div class="column grid_9">
-        <p>Copyright &copy; 2010 Andreas Marienborg</p>
-      </div>
-    </footer>
-  </div> <!--! end of #container -->
+            <div class="column grid_9 content">
+                <div>
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+
+        <footer class="row">
+        <div class="column grid_9">
+            <p>Copyright &copy; 2010 Andreas Marienborg</p>
+        </div>
+        </footer>
+    </div> <!--! end of #container -->
 
 
   <!-- Javascript at the bottom for fast page loading -->
@@ -111,7 +116,7 @@
   <!-- end profiling code -->
 
 
-  <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet 
+  <!-- asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
        change the UA-XXXXX-X to be your site's ID -->
   <script>
    var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
