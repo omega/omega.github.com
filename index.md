@@ -10,7 +10,7 @@ layout: default
             <span class="year">{{ post.date | date: '%Y' }}</span>
         </span>
 
-        <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+        <a href="{{ post.url }}"><h1>{{ post.title }}</h1></a>
         {{ post.content }}
     </li>
 {% endfor %}
