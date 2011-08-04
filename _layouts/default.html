@@ -29,7 +29,7 @@
   <!-- Chrome Frame is only invoked if meta element for compatibility mode is within the first 1K bytes code.google.com/p/chromium/issues/detail?id=23003 -->
 
 
-  <title>{{ page.title }} - omega.palle.net</title>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}omega.palle.net</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
