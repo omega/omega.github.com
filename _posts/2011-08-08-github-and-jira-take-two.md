@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "GitHub <-> Jira"
+title: "GitHub  Jira"
 tags:
     - tech
     - github
