@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        <title>css animation experiment</title>
+        <style type="text/css">
+.outer .inner {
+    -moz-animation-name:running;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 0.8s;
+    -moz-animation-timing-function: linear;
+    background-image: -moz-repeating-linear-gradient(left -45deg, rgba(255,255,255,0) 0px, rgba(255,255,255,0) 10px, rgba(0,0,0,0.17) 10px, rgba(0,0,0,0.17) 20px);
+    background-image: -webkit-repeating-linear-gradient(left -45deg, rgba(255,255,255,0.17) 0px, rgba(255,255,255,0.17) 10px, rgba(0,0,0,0.17) 10px, rgba(0,0,0,0.17) 20px);
+    background-repeat: repeat-x;
+    width: 250%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.outer {
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+    height: 50px;
+    border-radius: 10em;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0px 0px 1px #aaa;
+    color: silver;
+
+}
+.green {
+    background-color: #00B400;
+    background-image: -moz-linear-gradient(center top , #00B400 50%, #018F00 50%);
+}
+.red {
+    background-color: #AF1000;
+    background-image:-moz-linear-gradient(center top , #AF1000 50%, #990000 50%);
+}
+.black {
+    background-image: -moz-linear-gradient(center top, #444 15%, #222 50%);
+}
+@-moz-keyframes running {
+    from { background-position: 0px 0px; }
+    to   { background-position: -28px 0px; }
+}
+
+</style>
+</head>
+<body>
+    <div class="outer"><div class="inner"></div></div>
+    <div class="outer red"><div class="inner"></div></div>
+    <div class="outer green"><div class="inner"></div></div>
+    <div class="outer black"><div class="inner"></div><D-r></div>
+</body>
+</html>
