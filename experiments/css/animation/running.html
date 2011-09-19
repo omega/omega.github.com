@@ -3,7 +3,8 @@
     <head>
         <title>css animation experiment</title>
         <style type="text/css">
-.outer .inner {
+            .outer:after {
+                content: "";
     -moz-animation-name:running;
     -moz-animation-iteration-count: infinite;
     -moz-animation-duration: 0.8s;
@@ -15,8 +16,9 @@
     background-image: -moz-repeating-linear-gradient(-45deg, rgba(255,255,255,0) 0px, rgba(255,255,255,0) 10px, rgba(0,0,0,0.17) 10px, rgba(0,0,0,0.17) 20px);
     background-image: -webkit-repeating-linear-gradient(-45deg, rgba(255,255,255,0) 0px, rgba(255,255,255,0) 10px, rgba(0,0,0,0.17) 10px, rgba(0,0,0,0.17) 20px);
     background-repeat: repeat-x;
-    width: 250%;
+    width: 100%;
     height: 100%;
+    background-size: 250% 100%;
     top: 0;
     left: 0;
     position: absolute;
@@ -65,9 +67,9 @@
 </style>
 </head>
 <body>
-    <div class="outer"><div class="inner"></div></div>
-    <div class="outer red"><div class="inner"></div></div>
-    <div class="outer green"><div class="inner"></div></div>
-    <div class="outer black"><div class="inner"></div><D-r></div>
+    <div class="outer"></div>
+    <div class="outer red"></div>
+    <div class="outer green"></div>
+    <div class="outer black"></div>
 </body>
 </html>
