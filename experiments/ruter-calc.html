@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <title>css skew experiment example</title>
+        <style type="text/css">
+            body {
+                background: white;
+                color: black;
+                font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+                font-weight: 200;
+            }
+            label {
+                display: block;
+                font-weight: bolc;
+            }
+            input {
+                display: block;
+                margin-bottom: 1.3em;
+                margin-left: 0.3em;
+                padding: 3px 2px;
+                font-size: 1.3em;
+            }
+            h1 { color: #ccc; }
+        </style>
+    </head>
+    <body>
+        <h1>#</h1>
+        <form action="">
+            <label for="balance">Balance</label>
+            <input type="number" name="balance" id="balance" size="4" onchange="calculate()">
+            <label for="ticketprice">Ticket price</label>
+            <input type="number" size="4" name="ticketprice" id="ticketprice" onchange="calculate()" value="27">
+            <label for="fillup">Fill up amount</label>
+            <input type="text" readonly id="fillup">
+            <label for="tickets"># of tickets</label>
+            <input type="text" readonly id="tickets">
+        </form>
+        <script>
+            "use strict";
+            function calculate() {
+                var balance = parseInt(document.getElementById('balance').value);
+                var tp = parseInt(document.getElementById('ticketprice').value);
+                var tickets = Math.floor(balance / tp);
+                var rest = balance % tp;
+                var fillup = 0;
+                var max = 1000;
+                //console.log(max, balance, tp, fillup, tickets, rest);
+                while (max && rest > 0) {
+                    max--;
+                    fillup = fillup + 50;
+                    tickets = Math.floor((balance + fillup) / tp);
+                    rest = (balance + fillup) % tp;
+                    //console.log(max, balance, tp, fillup, tickets, rest);
+                }
+                if (rest == 0) {
+                    document.getElementById('fillup').value = fillup;
+                    document.getElementById('tickets').value = tickets;
+                }
+                console.log("DONE");
+
+            }
+        </script>
+    </body>
+</html>
+
