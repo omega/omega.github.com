@@ -3,8 +3,9 @@
     <head>
         <title>css animation experiment</title>
         <style type="text/css">
-            .outer:after {
-                content: "";
+
+.inner {
+    content: "";
     -moz-animation-name:running;
     -moz-animation-iteration-count: infinite;
     -moz-animation-duration: 0.8s;
@@ -65,9 +66,9 @@
 </style>
 </head>
 <body>
-    <div class="outer"></div>
-    <div class="outer red"></div>
-    <div class="outer green"></div>
-    <div class="outer black"></div>
+    <div class="outer"><span class="inner"></span></div>
+    <div class="outer red"><span class="inner"></span></div>
+    <div class="outer green"><span class="inner"></span></div>
+    <div class="outer black"><span class="inner"></span></div>
 </body>
 </html>
