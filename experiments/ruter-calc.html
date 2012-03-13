@@ -20,6 +20,11 @@
                 padding: 3px 2px;
                 font-size: 1.3em;
             }
+            input[readonly] {
+                border: 0;
+                border-bottom: 1px solid silver;
+                text-align: right;
+            }
             h1 { color: #ccc; }
         </style>
     </head>
@@ -31,9 +36,9 @@
             <label for="ticketprice">Ticket price</label>
             <input type="number" size="4" name="ticketprice" id="ticketprice" onchange="calculate()" value="27">
             <label for="fillup">Fill up amount</label>
-            <input type="text" readonly id="fillup">
+            <input type="text" readonly id="fillup" size="4">
             <label for="tickets"># of tickets</label>
-            <input type="text" readonly id="tickets">
+            <input type="text" readonly id="tickets" size="4">
         </form>
         <script>
             "use strict";
