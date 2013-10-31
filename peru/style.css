@@ -1,0 +1,102 @@
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700);
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font-family: "Noto Sans", "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+    font-size: 80%;
+    margin: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.photo {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.entries {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.entries .date {
+    font-family: "Helvetica Neue", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 1em;
+    position: relative;
+    font-size: 150%;
+}
+.date .day-abbr {
+    display: inline-block;
+    transform: rotate(0.75turn) translateX(-38px) translateY(1px);
+    -webkit-transform: rotate(0.75turn) translateX(-38px) translateY(1px);
+    transform-origin: 0px 0px 0px;
+    -webkit-transform-origin: 0px 0px 0px;
+    position: absolute;
+    font-size: 63%;
+    /*
+    text-align: right;
+    */
+}
+.date .day {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 700;
+    margin-left: 16px;
+}
+.date .month {
+    display: none;
+}
+.date .month-abbr, .date .year {
+    display: inline-block;
+    position: absolute;
+    font-size: 86%;
+}
+.date .month-abbr {
+    top: 16%;
+}
+.date .year {
+    bottom: 12%;
+}
+.entries .entry {
+    padding-bottom: 3px;
+    margin-bottom: 1em;
+    position: relative;
+}
+.entries .entry.photo-only {
+    padding-bottom: 0em;
+    margin-top: -1em;
+}
+
+p, h1 {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+p {
+    max-width: 60em;
+}
+.temp:after {
+    content: "°";
+}
+.entry .header {
+    width: 100%;
+    background-color: rgba(225,225,225,0.5);
+    padding: 2px 8px;
+    right: 0;
+    font-size: 0.9em;
+}
+.entry.text-only .header {
+    position: static;
+}
+
+.header > span:before {
+    content: " ‧ ";
+}
+.header > span:first-child:before {
+    content: "";
+}
+
