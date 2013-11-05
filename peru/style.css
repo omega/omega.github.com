@@ -10,7 +10,59 @@ body {
     margin: 0;
     max-width: 980px;
     margin: 0 auto;
+    background: #222;
+    color: #eee;
 }
+.logo {
+    font-size: 1.4rem;
+    line-height: 1em;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 1px rgba(127,127,127,0.6), 0px 0px 0px rgba(255,255,255,0.9);
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+}
+.logo:before {
+    content: '🌎';
+    display: block;
+    position: absolute;
+    left: 0;
+    font-size: 3rem;
+    z-index: -1;
+    text-shadow: none;
+}
+
+@media (min-width: 480px) {
+    .logo {
+        font-size: 2rem;
+        letter-spacing: 0.11rem;
+        padding-left: 3.3rem;
+    }
+}
+@media (min-width: 980px) {
+    .logo {
+        font-size: 4rem;
+        padding-left: 0;
+    }
+    .logo:before {
+        right: 0;
+        left: auto;
+    }
+    .entry, .entries .date {
+        font-size: 1.2rem;
+    }
+    .entries .date {
+        position: absolute;
+        left: -50px;
+        transform: rotate(0.75turn) translateX(-30px);
+    }
+    .entries .date .day-abbr {
+        display: none;
+    }
+}
+
+
+
 .photo, .photo img {
     max-width: 100%;
     max-height: 100%;
@@ -21,8 +73,9 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+    position: relative;
 }
-.entries .date {
+.date {
     font-family: "Helvetica Neue", sans-serif;
     text-transform: uppercase;
     font-weight: normal;
