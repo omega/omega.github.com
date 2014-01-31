@@ -1,6 +1,6 @@
 ---
 layout: default
-title: # Ruter chaos
+title: Ruter chaos
 ---
 Here in Oslo, all busses, trams etc are operated by # Ruter. They have
 converted all tickets to something called Flexus. As a part of that, I now have
