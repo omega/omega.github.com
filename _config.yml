@@ -1,2 +1,9 @@
 safe: true
-pygments: true
+highlighter: pygments
+defaults:
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            layout: "default"

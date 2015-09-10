@@ -1,22 +1,60 @@
 <!doctype html>
-<title>not found</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
 
-<style>
-body { text-align: center;}
-h1 { font-size: 50px; }
-body { font: 20px Constantia, 'Hoefler Text',  "Adobe Caslon Pro", Baskerville, Georgia, Times, serif; color: #999; text-shadow: 2px 2px 2px rgba(200, 200, 200, 0.5); }
-::-moz-selection{ background:#FF5E99; color:#fff; }
-::selection { background:#FF5E99; color:#fff; } 
-details { display:block; }
-a { color: rgb(36, 109, 56); text-decoration:none; }
-a:hover { color: rgb(96, 73, 141) ; text-shadow: 2px 2px 2px rgba(36, 109, 56, 0.5); }
-span[frown] { transform: rotate(90deg); display:inline-block; color: #bbb; }
-</style>
+        * {
+            line-height: 1.2;
+            margin: 0;
+        }
 
+        html {
+            color: #888;
+            display: table;
+            font-family: sans-serif;
+            height: 100%;
+            text-align: center;
+            width: 100%;
+        }
 
+        body {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 2em auto;
+        }
 
+        h1 {
+            color: #555;
+            font-size: 2em;
+            font-weight: 400;
+        }
 
-<details>
-  <summary><h1>Not found</h1></summary>
-  <p><span frown>:(</span></p>
-</details>
+        p {
+            margin: 0 auto;
+            width: 280px;
+        }
+
+        @media only screen and (max-width: 280px) {
+
+            body, p {
+                width: 95%;
+            }
+
+            h1 {
+                font-size: 1.5em;
+                margin: 0 0 0.3em;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Page Not Found</h1>
+    <p>Sorry, but the page you were trying to view does not exist.</p>
+</body>
+</html>
+<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
