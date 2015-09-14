@@ -22,6 +22,7 @@ My next attempt was to get nginx running, and to add a vhost with ssl, and keys 
 
 I decided to not automate buying keys, and just issue the buy command on my mac, and add the `.key` file to the salt repo. I added a cronjob via salt though, that would download the certificates for me:
 
+{% raw %}
 ```SaltStack
 sslmate-apt-repo:
   pkgrepo.managed:
@@ -50,6 +51,7 @@ sslmate download --all --temp:
     - minute: random
     - hour: 0
 ```
+{% endraw %}
 
 This way I just add all the `<domain>.key` files to `base/sslmate/keys/` in my repo, and then the cronjob will pick it up and download the certificates when they are ready. The `--temp` ensures that there will be some self-signed certs available immediately, so nginx can be configured and “work” until the proper certificates are in place.
 
@@ -70,15 +72,19 @@ web:
 
 And then I added a state something like this:
 
+{% raw %}
 ```SaltStack
 {% for hostname, data in pillar.get(‘web:sites’, {}).items() %}
 ```
+{% endraw %}
 
 This doesn’t work, which surprises me, since `salt-call pillar.get web:sites` works perfectly fine. Turns out the `get` in jinja isn’t the same `get`. Reading the docs explained this, but I didn’t read it carefully enough the first few times :) I ended up with this, which works.
 
+{% raw %}
 ```SaltStack
 {% for hostname, data in pillar.get(‘web’).get('sites’, {}).items() %}
 ```
+{% endraw %}
 
 With that added, and then some nginx config file templates using jinja, I had a working setup, where it adds the vhost, and restarts nginx, all with ssl enabled automatically. That’s a victory in my book :)
 
