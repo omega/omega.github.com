@@ -18,7 +18,7 @@ li {
 $color: #eee;
 
 header {
-  background-image: url('http://localhost:4000/assets/header-image.jpg');
+  background-image: url('/assets/header-image.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%;
@@ -105,7 +105,7 @@ footer {
 
 @media (min-width: 768px) {
   header {
-    background-image: url('http://localhost:4000/assets/header-image-tall.jpg');
+    background-image: url('/assets/header-image-tall.jpg');
 
     position: fixed;
     width: 300px;
@@ -138,7 +138,7 @@ footer {
                 width: 400px;
                 outline: none;
                 margin: 0 auto;
-                background-image: url('//omega.github.io/assets/imac_transparent.png');
+                background-image: url('/assets/imac_transparent.png');
                 background-repeat: no-repeat;
                 background-position: top center;
                 background-size: 100%;
@@ -153,7 +153,7 @@ footer {
                 }
             }
             .sandbox.ipad {
-                background-image: url('//omega.github.io/assets/ipad.png');
+                background-image: url('/assets/ipad.png');
                 perspective: 949px;
                 perspective-origin: left center;
                 iframe {
