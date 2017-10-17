@@ -23,7 +23,7 @@ My next attempt was to get nginx running, and to add a vhost with ssl, and keys 
 I decided to not automate buying keys, and just issue the buy command on my mac, and add the `.key` file to the salt repo. I added a cronjob via salt though, that would download the certificates for me:
 
 {% raw %}
-```SaltStack
+```yaml
 sslmate-apt-repo:
   pkgrepo.managed:
     - humanname: SSLMate apt repos
@@ -61,7 +61,7 @@ I did have some struggle with my DNS setup for DNS domain verification, but it w
 
 Next up was nginx. I already had it running, so I just needed to add vhosts. I added pillars like these:
 
-```SaltStack
+```yaml
 web:
   sites:
     ‘mydomain.com':
@@ -73,7 +73,7 @@ web:
 And then I added a state something like this:
 
 {% raw %}
-```SaltStack
+```handlebars
 {% for hostname, data in pillar.get(‘web:sites’, {}).items() %}
 ```
 {% endraw %}
@@ -81,7 +81,7 @@ And then I added a state something like this:
 This doesn’t work, which surprises me, since `salt-call pillar.get web:sites` works perfectly fine. Turns out the `get` in jinja isn’t the same `get`. Reading the docs explained this, but I didn’t read it carefully enough the first few times :) I ended up with this, which works.
 
 {% raw %}
-```SaltStack
+```handlebars
 {% for hostname, data in pillar.get(‘web’).get('sites’, {}).items() %}
 ```
 {% endraw %}
