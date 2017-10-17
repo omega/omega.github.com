@@ -1,5 +1,7 @@
 ---
 ---
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Archivo+Narrow');
+
 $typl8-headings: (
   h1: typl8-beta,
   h2: typl8-gamma,
@@ -8,7 +10,11 @@ $typl8-headings: (
   h5: typl8-zeta,
   h6: typl8-zeta
 );
-@import "typeplate";
+
+$typl8-custom-font: "Archivo Narrow";
+
+@import "_typeplate-index.scss";
+
 
 li {
     p:first-child + p {
@@ -45,9 +51,17 @@ header {
     width: 100%;
     text-align: center;
     margin: 0;
+    ul.navigation {
+        padding: 0;
+    }
     li {
+        display: inline-block;
+        width: 40%;
       font-weight: bold;
       list-style: none;
+      background-color: rgba(0,0,0,0.3);
+      margin: 0.6rem;
+      border-radius: 4px;
       a {
         color: white !important;
       }
@@ -56,21 +70,36 @@ header {
   }
 }
 div[role="main"] {
+    padding: 0.3rem;
   blockquote {
     margin-left: 1rem;
     padding-left: 0.5rem;
     border-left: 5px solid $color;
   }
   .highlight {
-    margin: 1em;
-    background-color: rgba($color, 0.1);
+    margin: 1rem -0.3rem;
+    padding: 0.3rem;
+    line-height: 1.1rem;
+    font-size: 0.8rem;
+    background-color: rgba($color, 0.7);
     /* *cry* the scss parser messes this up :/
 background-image: linear-gradient(0deg,white 2px,transparent 2px),linear-gradient(90deg, white 2px, transparent 2px),linear-gradient(0deg, rgba(255,255,255,0.1) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
 background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
 background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
     background-repeat: repeat;
-    */
+   */
+
+    code {
+        background-color: transparent;
+    }
   }
+
+  p > code {
+      background-color: hsla(0, 100%, 80%, 0.4);
+      padding: 1px 3px;
+      border-radius: 2px;
+  }
+
   .posts {
       padding: 0;
       /* we should change the font sizes on headings a tad maybe? */

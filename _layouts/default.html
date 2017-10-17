@@ -5,7 +5,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <link rel="openid2.provider openid.provider" href="https://https://www.startssl.com/id.ssl">
-  <link rel="openid2.local_id openid.delegate" href="https://omega.startssl.com/"> 
+  <link rel="openid2.local_id openid.delegate" href="https://omega.startssl.com/">
   <meta http-equiv="X-XRDS-Location" content="https://omega.startssl.com/xrds/" />
 
 
@@ -14,7 +14,7 @@
   <meta name="author" content="">
 
   <!-- CSS : implied media="all" -->
-  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/normalize.min.css">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/highlight.css?v=1">
   <link rel="alternate" href="/atom.xml" type="application/atom+xml">
@@ -35,7 +35,7 @@
     </header>
 
     <div id="main" role="main">
-        {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
+        {% if page.title %}<h1 class="typl8-alpha">{{ page.title }}</h1>{% endif %}
 
         <div>
             {{ content }}
@@ -46,8 +46,8 @@
         <p>Copyright &copy; {{ site.time | date: '%Y' }} Andreas Marienborg, iMac image from <a href="http://wordrom.com/resources/psd/freebie-imac-psd-file/">wordrom.com</a></p>
     </footer>
 
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script>
 
   <script>
    var _gaq = [['_setAccount', 'UA-11341410-1'], ['_trackPageview']];
