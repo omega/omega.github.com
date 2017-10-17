@@ -1,5 +1,4 @@
 safe: true
-highlighter: pygments
 plugins:
     - jekyll-feed
 defaults:
